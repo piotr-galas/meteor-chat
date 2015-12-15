@@ -10,13 +10,13 @@
         <time>{{ timeFormat }}</time>
         {{#if isOwner}}
           <p class="self">
-            <span class="author" title="{{this.username}}">{{username}}</span>
+            <span class="author" title="{{username}}">{{username}}</span>
             <span>{{message}}</span>
           </p>
         {{/if}}
         {{#unless isOwner}}
           <p>
-            <span class="author" title="{{this.username}}">{{username}}</span>
+            <span class="author" title="{{username}}">{{username}}</span>
             <span>{{message}}</span>
           </p>
         {{/unless}}

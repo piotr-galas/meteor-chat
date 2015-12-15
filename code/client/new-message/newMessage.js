@@ -31,10 +31,6 @@ function isValidMessage() {
   return getMessageCount() > 0 && !isMessageTooLong();
 }
 
-function startup() {
-  Session.set('messageCount', 0);
-}
-
 Template.newMessage.events({
   'submit form': createMessage,
   'keyup input[name=message]': countMessageLength
@@ -45,5 +41,10 @@ Template.newMessage.helpers({
   isValidMessage: isValidMessage,
   isMessageTooLong: isMessageTooLong
 });
+
+function startup() {
+  Session.set('messageCount', 0);
+}
+
 
 Meteor.startup(startup);
